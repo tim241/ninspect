@@ -1,15 +1,13 @@
-# ninspect: NES Classic NAND Inspector
+# ninspect: (S)NES Classic NAND Inspector
 
 ## What it is
 
-ninspect is a dockerized application that mounts  a raw, encrypted NAND dump from your NES Classic Edition inside a
+ninspect is a dockerized application that mounts  a raw, encrypted NAND dump from your (S)NES Classic Edition inside a
 Debian container and gives you a shell to inspect it. It runs on all systems that support Docker, including Windows.
 
 ## How to use
 
 - Use [hakchi](https://github.com/madmonkey1907/hakchi) to dump both your kernel and NAND
-    - [docker-hakchi](docker-hakchi/README.md) is a dockerized version of hakchi and integrated with ninspect to help
-       with this process
 - Place kernel.img and nand.bin inside the nand folder of ninspect
 - Install docker on your computer
 - From the docker prompt, cd to the ninspect folder

@@ -1,13 +1,19 @@
 #!/bin/bash
 set -e
 
-# This script decrypts the NES Classic Edition NAND image at /dump/nand.bin using the key file found in /dump/kernel.img
+# This script decrypts the (S)NES Classic Edition NAND image at /dump/nand.bin using the key file found in /dump/kernel(_snes).img
 # and mounts the decrypted rootfs partition and the data partition at /mnt/rootfs and /mnt/data, respectively.
 
 NAND_IMAGE_ENCRYPTED="/dump/nand.bin"
 LOGICAL_VOLUME="/dump/logical.bin"
 
+
 KERNEL_IMAGE="/dump/kernel.img"
+
+if [ -f "/dump/kernel_snes.img" ]; then
+    KERNEL_IMAGE="/dump/kernel_snes.img"
+fi
+
 KEY_FILE="/dump/key-file"
 
 ROOTFS_ENCRYPTED="/dump/rootfs.bin"

@@ -5,10 +5,3 @@ services:
     volumes:
       - ./dump/:/dump/
     privileged: true
-
-  hakchi:
-    build: docker-hakchi
-    volumes:
-      - ./dump/:/hakchi/dump/
-    devices:
-      - /dev/bus/usb
